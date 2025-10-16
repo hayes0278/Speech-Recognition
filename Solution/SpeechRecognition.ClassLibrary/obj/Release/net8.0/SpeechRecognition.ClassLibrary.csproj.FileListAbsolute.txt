@@ -1,0 +1,12 @@
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Release\net8.0\SpeechRecognition.ClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Release\net8.0\SpeechRecognition.ClassLibrary.AssemblyInfoInputs.cache
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Release\net8.0\SpeechRecognition.ClassLibrary.AssemblyInfo.cs
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Release\net8.0\SpeechRecognition.ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Release\net8.0\SpeechRecognition.ClassLibrary.sourcelink.json
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\bin\Release\net8.0\SpeechRecognition.ClassLibrary.deps.json
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\bin\Release\net8.0\SpeechRecognition.ClassLibrary.dll
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\bin\Release\net8.0\SpeechRecognition.ClassLibrary.pdb
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Release\net8.0\SpeechRecognition.ClassLibrary.dll
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Release\net8.0\refint\SpeechRecognition.ClassLibrary.dll
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Release\net8.0\SpeechRecognition.ClassLibrary.pdb
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Release\net8.0\ref\SpeechRecognition.ClassLibrary.dll
