@@ -10,3 +10,4 @@ C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\De
 C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Debug\net8.0\refint\SpeechRecognition.ClassLibrary.dll
 C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Debug\net8.0\SpeechRecognition.ClassLibrary.pdb
 C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Debug\net8.0\ref\SpeechRecognition.ClassLibrary.dll
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.ClassLibrary\obj\Debug\net8.0\SpeechRecognition.ClassLibrary.csproj.AssemblyReference.cache

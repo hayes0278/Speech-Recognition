@@ -101,3 +101,5 @@ C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.NunitTests\obj\Debu
 C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.NunitTests\bin\Debug\net8.0\CoverletSourceRootsMapping_SpeechRecognition.NunitTests
 C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.NunitTests\bin\Debug\net8.0\SpeechRecognition.ClassLibrary.dll
 C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.NunitTests\bin\Debug\net8.0\SpeechRecognition.ClassLibrary.pdb
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.NunitTests\bin\Debug\net8.0\System.Speech.dll
+C:\Code\GitHub\Speech-Recognition\Solution\SpeechRecognition.NunitTests\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Speech.dll

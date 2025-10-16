@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8bfUEaV95uU=",
+  "dgSpecHash": "nicycxsdF18=",
   "success": true,
   "projectFilePath": "C:\\Code\\GitHub\\Speech-Recognition\\Solution\\SpeechRecognition.ClassLibrary\\SpeechRecognition.ClassLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\marsh\\.nuget\\packages\\system.speech\\9.0.10\\system.speech.9.0.10.nupkg.sha512"
+  ],
   "logs": []
 }

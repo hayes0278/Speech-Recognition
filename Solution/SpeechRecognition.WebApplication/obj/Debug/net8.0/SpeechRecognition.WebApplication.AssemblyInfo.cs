@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpeechRecognition.WebApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17fb069028a9b262e0b8b8e3ee05b7df8e60eef6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b029f5ed944ec029884ba7ab544da29aa476f401")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpeechRecognition.WebApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpeechRecognition.WebApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

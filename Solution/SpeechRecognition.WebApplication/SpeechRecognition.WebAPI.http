@@ -1,4 +1,4 @@
-@LanguageTranslator.WebAPI_HostAddress = https://localhost:7013
+@LanguageTranslator.WebAPI_HostAddress = https://localhost:7201
 
 GET {{LanguageTranslator.WebAPI_HostAddress}}/speechrecognition/
 Accept: application/json
