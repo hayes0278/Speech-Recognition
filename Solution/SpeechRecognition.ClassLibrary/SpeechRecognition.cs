@@ -8,6 +8,7 @@ namespace SpeechRecognition.ClassLibrary
         #region fields
 
         private string _inputText;
+        private static string[] _commandChoices = { "red", "green", "blue", "exit" };
 
         #endregion
 
@@ -22,50 +23,38 @@ namespace SpeechRecognition.ClassLibrary
 
         #region public methods
 
-        public static void SynthesiseText(string input)
+        public static bool LoadGrammar(string[] inputGrammar)
         {
-
+            return true;
         }
 
         #endregion
 
         #region private methods
 
-        private static void SpeakTextInput(string input)
+        public static bool RecogniseInputCommand(string inputCommand)
         {
             // Create a new SpeechRecognitionEngine instance.
             using SpeechRecognizer recognizer = new SpeechRecognizer();
             using ManualResetEvent exit = new ManualResetEvent(false);
 
-            // Create a simple grammar that recognizes "red", "green", "blue", or "exit".
             Choices choices = new Choices();
-            choices.Add(new string[] { "red", "green", "blue", "exit" });
+            choices.Add(_commandChoices);
 
-            // Create a GrammarBuilder object and append the Choices object.
-            GrammarBuilder gb = new GrammarBuilder();
-            gb.Append(choices);
+            GrammarBuilder grammerBuilder = new GrammarBuilder();
+            grammerBuilder.Append(choices);
 
-            // Create the Grammar instance and load it into the speech recognition engine.
-            Grammar g = new Grammar(gb);
-            recognizer.LoadGrammar(g);
-
-            // Register a handler for the SpeechRecognized event.
-            recognizer.SpeechRecognized += (s, e) =>
-            {
-                Console.WriteLine($"Recognized: {e.Result.Text}, Confidence: {e.Result.Confidence}");
-                if (e.Result.Text == "exit")
-                {
-                    exit.Set();
-                }
-            };
-
-            // Emulate
-            Console.WriteLine("Emulating \"red\".");
-            recognizer.EmulateRecognize("red");
+            Grammar grammer = new Grammar(grammerBuilder);
+            recognizer.LoadGrammar(grammer);
 
             Console.WriteLine("Speak red, green, blue, or exit please...");
 
-            exit.WaitOne();
+            Console.WriteLine("Emulating \"red\".");
+            recognizer.EmulateRecognize("red");
+
+            //exit.WaitOne();
+
+            return true;
         }
 
         #endregion

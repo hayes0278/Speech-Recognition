@@ -1,8 +1,44 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Speech Recognition</h1>
+    <p>A lightweight speech recogntion web tool.</p>
 </div>
+
+<div class="text-left">
+    <p>
+        <form id="frmSpeechSynthesis" name="frmSpeechSynthesis" action="" method="Get">
+            <p>
+                <label for="selCommand">Command:</label>
+                <select id="selCommand" name="selCommand">
+                    <option value="bckcolor">Background Color</option>
+                    <option value="woman">Text Color</option>
+                    <option value="young">Young</option>
+                    <option value="old">Old</option>
+                </select><br />
+                <label for="txtCustomCommand">Custom Command:</label><br />
+                <input type="text" id="txtCustomCommand" name="txtCustomCommand" rows="5" cols="60">
+            </p>
+
+            <p>
+                <label for="selAction">Action:</label>
+                <select id="selAction" name="selAction">
+                    <option value="man">Change Color</option>
+                    <option value="woman">Woman</option>
+                    <option value="young">Young</option>
+                    <option value="old">Old</option>
+                </select><br />
+                <label for="txtCustomAction">Custom Action:</label><br />
+                <input type="text" id="txtCustomAction" name="txtCustomAction" rows="5" cols="60">
+            </p>
+
+            <p>
+                <input type="submit" id="btnSubmit" name="btnSubmit" value="Recognize" />
+                <input type="reset" id="btnReset" name="btnReset" value="Start Again" />
+            </p>
+        </form>
+    </p>
+</div>
+<script>const textField = document.getElementById("txtInput"); textField.focus();</script>
