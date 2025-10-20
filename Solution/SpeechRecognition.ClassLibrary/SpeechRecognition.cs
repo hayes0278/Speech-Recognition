@@ -8,7 +8,7 @@ namespace SpeechRecognition.ClassLibrary
         #region fields
 
         private string _inputText;
-        private static string[] _commandChoices = { "red", "green", "blue", "exit" };
+        private static string[] _commandChoices = { "hello", "red", "green", "blue", "exit" };
 
         #endregion
 
@@ -47,7 +47,7 @@ namespace SpeechRecognition.ClassLibrary
             Grammar grammer = new Grammar(grammerBuilder);
             recognizer.LoadGrammar(grammer);
 
-            Console.WriteLine("Speak red, green, blue, or exit please...");
+            Console.WriteLine("Speak hello, red, green, blue, or exit please...");
 
             Console.WriteLine("Emulating \"red\".");
             recognizer.EmulateRecognize("red");

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpeechRecognition.NunitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7eb187aabebb24470c77710eb6e174487da2318a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d50bdd967656db11a186fb8c3860bc82c825736")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpeechRecognition.NunitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpeechRecognition.NunitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

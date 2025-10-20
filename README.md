@@ -9,9 +9,9 @@ A lightweight speech recognition web tool written in C#.
 - Supports English, Spanish, French and German.
 
 ## Screenshots 
-![Screenshot A](http://url/to/img.png)
+![Home Page Screenshot](https://github.com/hayes0278/Speech-Recognition/blob/main/Media/Screenshots/HomePage.png)
 
-![Screenshot B](http://url/to/img.png)
+![Swagger Screenshot](https://github.com/hayes0278/Speech-Recognition/blob/main/Media/Screenshots/SwaggerPage.png)
 
 ## Live Demo
 View the project [Live Demonstration]().
@@ -26,5 +26,14 @@ View the project [Source Code](https://github.com/hayes0278/Speech-Recognition).
 - Reads in default and any custom user action.
 - Converts the audio input to text format.
 
+## Helpful Links
+- [Home Page](https://localhost:7201/)
+- [Swagger](https://localhost:7201/swagger)
+- []()
+- []()
+- []()
+
 ## Limitations
+- 
+- 
 - 
