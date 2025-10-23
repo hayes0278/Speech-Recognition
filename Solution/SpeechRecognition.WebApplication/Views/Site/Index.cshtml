@@ -8,32 +8,29 @@
 </div>
 
 <div class="text-left">
+    <p>@ViewBag.Message</p>
     <p>
         <form id="frmSpeechRecognition" name="frmSpeechRecognition" action="" method="Get">
             <p>
                 <label for="selCommand">Command:</label>
-                <select id="selCommand" name="selCommand">
-                    <option value="bckcolor">Hello</option>
-                    <option value="txtColor">Text Color</option>
-                    <option value="forColor">Exit</option>
-                </select><br />
-                <label for="txtCustomCommand">Custom Command:</label>
-                <input type="text" id="txtCustomCommand" name="txtCustomCommand" width="150px">
+                <select id="selCommand" name="selCommand" onchange="changeCommand();" value="@ViewBag.Command">
+                    <option value="hello">Hello</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="exit">Exit</option>
+                </select>
             </p>
 
             <p>
                 <label for="selAction">Action:</label>
-                <select id="selAction" name="selAction">
-                    <option value="man">Color: </option>
-                    <option value="woman">Color: </option>
-                    <option value="young">Color: </option>
-                    <option value="old">Color: </option>
-                </select><br />
-                <label for="txtCustomAction">Custom Action:</label>
-                <input type="text" id="txtCustomAction" name="txtCustomAction" width="75px">
+                <select id="selAction" name="selAction" onchange="changeAction();" value="@ViewBag.Action">
+                    <option value="message">Message</option>
+                    <option value="alert">Alert Box</option>
+                </select>
             </p>
             <p>
-                <div id="testArea">
+                <div id="testArea" name="testArea">
 
                 </div>
             </p>
@@ -43,5 +40,7 @@
             </p>
         </form>
     </p>
+    <p>
+        @ViewBag.TestTranslation
+    </p>
 </div>
-<script>const textField = document.getElementById("txtInput"); textField.focus();</script>

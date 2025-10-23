@@ -22,9 +22,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Site" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Site" asp-action="Privacy">Help</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -38,8 +35,8 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - Speech Recognition - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> | 
-            <select id="selLanguage" name="selLanguage">
+            &copy; 2025 - Speech Recognition || 
+            <select id="selLanguage" name="selLanguage" onclick="changeLanguage(this.value)">
                 <option value="en-us">English</option>
                 <option value="fr-fr">French</option>
                 <option value="de-de">German</option>

@@ -20,3 +20,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#testArea {
+    background-color: lightblue;
+    padding: 20px;
+    border: 1px solid blue;
+    text-align: left;
+}

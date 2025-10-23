@@ -3,27 +3,28 @@ using System.Speech.Synthesis;
 
 namespace SpeechRecognition.ClassLibrary
 {
-    public class SpeechRecognition
+    public class SpeechRecognitionApp
     {
         #region fields
 
-        private string _inputText;
-        private static string[] _commandChoices = { "hello", "red", "green", "blue", "exit" };
+        private string _command;
+        private string _action;
+        private string[] _commandChoices = { "hello", "red", "green", "blue", "exit" };
 
         #endregion
 
         #region constructors
 
-        public SpeechRecognition()
+        public SpeechRecognitionApp()
         {
-            _inputText = "Testing";
+            
         }
 
         #endregion
 
         #region public methods
 
-        public static bool LoadGrammar(string[] inputGrammar)
+        public bool LoadGrammar(string[] inputGrammar)
         {
             return true;
         }
@@ -32,7 +33,7 @@ namespace SpeechRecognition.ClassLibrary
 
         #region private methods
 
-        public static bool RecogniseInputCommand(string inputCommand)
+        public bool RecogniseInputCommand(string inputCommand)
         {
             // Create a new SpeechRecognitionEngine instance.
             using SpeechRecognizer recognizer = new SpeechRecognizer();
@@ -47,10 +48,10 @@ namespace SpeechRecognition.ClassLibrary
             Grammar grammer = new Grammar(grammerBuilder);
             recognizer.LoadGrammar(grammer);
 
-            Console.WriteLine("Speak hello, red, green, blue, or exit please...");
+            // Console.WriteLine("Type hello, red, green, blue, or exit please...");
 
-            Console.WriteLine("Emulating \"red\".");
-            recognizer.EmulateRecognize("red");
+            Console.WriteLine("Emulating \"${inputCommand}\".");
+            RecognitionResult result = recognizer.EmulateRecognize(inputCommand);
 
             //exit.WaitOne();
 
@@ -61,10 +62,10 @@ namespace SpeechRecognition.ClassLibrary
 
         #region properties
 
-        public string InputText
+        public string Command
         {
-            get { return _inputText; }
-            set { _inputText = value; }
+            get { return _command; }
+            set { _command = value; }
         }
 
         #endregion
