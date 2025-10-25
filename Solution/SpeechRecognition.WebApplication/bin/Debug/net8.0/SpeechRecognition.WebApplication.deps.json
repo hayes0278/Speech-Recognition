@@ -15,6 +15,20 @@
         },
         "runtime": {
           "SpeechRecognition.WebApplication.dll": {}
+        },
+        "resources": {
+          "de-de/SpeechRecognition.WebApplication.resources.dll": {
+            "locale": "de-de"
+          },
+          "en-us/SpeechRecognition.WebApplication.resources.dll": {
+            "locale": "en-us"
+          },
+          "es-es/SpeechRecognition.WebApplication.resources.dll": {
+            "locale": "es-es"
+          },
+          "fr-fr/SpeechRecognition.WebApplication.resources.dll": {
+            "locale": "fr-fr"
+          }
         }
       },
       "Microsoft.OpenApi/1.6.25": {
