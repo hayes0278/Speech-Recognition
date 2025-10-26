@@ -43,3 +43,16 @@ function displayMessage(message) {
 function displayAlert(message) {
     alert(message);
 }
+
+function changeCommand(command) {
+    document.getElementById('testArea').innerHTML = command;
+    alert(command);
+}
+
+function changeAction(action) {
+    document.getElementById('testArea').innerHTML = action;
+    alert(action);
+}
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
+alert('Test');

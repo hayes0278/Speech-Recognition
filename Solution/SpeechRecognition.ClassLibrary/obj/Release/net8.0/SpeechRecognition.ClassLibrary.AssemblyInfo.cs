@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpeechRecognition.ClassLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60dd70e440d9c6dc13918faa57214ca11f2f97f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9636e9b7c90e0cbd4683a0298de272e8c76d6288")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpeechRecognition.ClassLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpeechRecognition.ClassLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

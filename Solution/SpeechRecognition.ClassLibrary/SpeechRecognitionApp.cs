@@ -10,6 +10,7 @@ namespace SpeechRecognition.ClassLibrary
         private string _command;
         private string _action;
         private string[] _commandChoices = { "hello", "red", "green", "blue", "exit" };
+        private string _result;
 
         #endregion
 
@@ -33,11 +34,13 @@ namespace SpeechRecognition.ClassLibrary
 
         #region private methods
 
-        public bool RecogniseInputCommand(string inputCommand)
+        public string RecogniseInputCommand(string inputCommand)
         {
             // Create a new SpeechRecognitionEngine instance.
             using SpeechRecognizer recognizer = new SpeechRecognizer();
             using ManualResetEvent exit = new ManualResetEvent(false);
+
+            string result = null;
 
             Choices choices = new Choices();
             choices.Add(_commandChoices);
@@ -48,14 +51,27 @@ namespace SpeechRecognition.ClassLibrary
             Grammar grammer = new Grammar(grammerBuilder);
             recognizer.LoadGrammar(grammer);
 
-            // Console.WriteLine("Type hello, red, green, blue, or exit please...");
+            Console.WriteLine($"Emulating \"{inputCommand}\".");
+            RecognitionResult _result = recognizer.EmulateRecognize(inputCommand);
 
-            Console.WriteLine("Emulating \"${inputCommand}\".");
-            RecognitionResult result = recognizer.EmulateRecognize(inputCommand);
+            if (_result == null)
+            {
+                Console.WriteLine("Speech recogniser offline.");
+                result = "The speech recogniser is offline.";
+                return result;
+            }
 
-            //exit.WaitOne();
+            if (_result.Text == inputCommand)
+            {
+                Console.WriteLine($"Recognised \"{inputCommand}\".");
+                result = $"Recognised \"{inputCommand}\" with a confidense of {_result.Confidence * 100.00} .";
+            } else
+            {
+                Console.WriteLine($"I dont understand the command: \"{inputCommand}\".");
+                result = $"I dont understand the command: \"{inputCommand}\".";
+            }
 
-            return true;
+            return result;
         }
 
         #endregion
@@ -66,6 +82,18 @@ namespace SpeechRecognition.ClassLibrary
         {
             get { return _command; }
             set { _command = value; }
+        }
+
+        public string Action
+        {
+            get { return _action; }
+            set { _action = value; }
+        }
+
+        public string Result
+        {
+            get { return _result; }
+            set { _result = value; }
         }
 
         #endregion

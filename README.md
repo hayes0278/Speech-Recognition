@@ -2,11 +2,10 @@
 A lightweight speech recognition web tool written in C#.
 
 ## Features
-- Add custom input commands to use.
+- Select input commands to test recognition.
 - Includes a REST API for external queries.
-- Assign actions for the input commands.
+- Assign actions for your input commands.
 - Test your creation in real time online.
-- Supports English, Spanish, French and German.
 
 ## Screenshots 
 ![Home Page Screenshot](Media/Screenshots/HomePage.png)
@@ -17,22 +16,21 @@ A lightweight speech recognition web tool written in C#.
 View the project [Source Code](https://github.com/hayes0278/Speech-Recognition).
 
 ## How It Works
-- Sets the default language to English.
-- Sets up user testing environment.
-- Reads in default and any custom user input commands.
-- Reads in default and any custom user action.
-- Converts the audio input to text format.
+- Sets up a user testing environment.
+- Reads in the input commands.
+- Reads in the command actions, and applies them.
+- Display to the user when a match was found.
+- Uses a simulator to test voice input commands.
 
-## Helpful Links
-- [Home Page](https://localhost:7201/)
-- [Swagger](https://localhost:7201/swagger)
-
-## Retrospective
-- 
-- 
-- 
+## Helpful Development Links
+- [Home Page](https://localhost:7201/) (Local)
+- [Swagger](https://localhost:7201/swagger) (Local)
 
 ## Limitations
 - Does not contain required security code for a production deployment.
+- Should be able to accept voice input from the web users micophone.
+
+## Retrospective
+- 
 - 
 - 

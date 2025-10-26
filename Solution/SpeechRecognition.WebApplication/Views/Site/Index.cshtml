@@ -4,7 +4,7 @@
 
 <div class="text-center">
     <h1 class="display-4">Speech Recognition</h1>
-    <p>A lightweight speech recognition web tool.</p>
+    <p>@ViewBag.AppTagLine</p>
 </div>
 
 <div class="text-left">
@@ -13,25 +13,27 @@
         <form id="frmSpeechRecognition" name="frmSpeechRecognition" action="" method="Get">
             <p>
                 <label for="selCommand">Command:</label>
-                <select id="selCommand" name="selCommand" onchange="changeCommand();" value="@ViewBag.Command">
+                <select id="selCommand" name="selCommand" onchange="changeCommand(this.value);" value="@ViewBag.Command">
                     <option value="hello">Hello</option>
                     <option value="red">Red</option>
+                    <option value="notreal">Not Real A</option>
                     <option value="green">Green</option>
                     <option value="blue">Blue</option>
+                    <option value="notreal">Not Real B</option>
                     <option value="exit">Exit</option>
                 </select>
             </p>
 
             <p>
                 <label for="selAction">Action:</label>
-                <select id="selAction" name="selAction" onchange="changeAction();" value="@ViewBag.Action">
+                <select id="selAction" name="selAction" onchange="changeAction(this.value);" value="@ViewBag.Action">
                     <option value="message">Message</option>
                     <option value="alert">Alert Box</option>
                 </select>
             </p>
             <p>
                 <div id="testArea" name="testArea">
-
+                    @ViewBag.Result
                 </div>
             </p>
             <p>
@@ -39,8 +41,5 @@
                 <input type="reset" id="btnReset" name="btnReset" value="Start Again" />
             </p>
         </form>
-    </p>
-    <p>
-        @ViewBag.TestTranslation
     </p>
 </div>
