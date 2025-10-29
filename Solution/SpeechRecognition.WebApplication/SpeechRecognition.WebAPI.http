@@ -1,6 +1,9 @@
 @SpeechRecognition.WebAPI_HostAddress = https://localhost:7201
 
-GET {{SpeechRecognition.WebAPI_HostAddress}}/speechrecognition/
+POST {{SpeechRecognition.WebAPI_HostAddress}}/speechrecognition/
+Accept: application/json
+
+GET {{SpeechRecognition.WebAPI_HostAddress}}/commands/
 Accept: application/json
 
 ###

@@ -3,12 +3,13 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Speech Recognition</h1>
+    <h1 class="display-4">@ViewBag.AppName</h1>
     <p>@ViewBag.AppTagLine</p>
 </div>
 
 <div class="text-left">
     <p>@ViewBag.Message</p>
+    <p>Valid Commands: "hello", "red", "green", "blue", "exit"</p>
     <p>
         <form id="frmSpeechRecognition" name="frmSpeechRecognition" action="" method="Get">
             <p>
@@ -23,22 +24,14 @@
                     <option value="exit">Exit</option>
                 </select>
             </p>
-
             <p>
-                <label for="selAction">Action:</label>
-                <select id="selAction" name="selAction" onchange="changeAction(this.value);" value="@ViewBag.Action">
-                    <option value="message">Message</option>
-                    <option value="alert">Alert Box</option>
-                </select>
-            </p>
-            <p>
-                <div id="testArea" name="testArea">
+                <div id="testArea" name="testArea" rows="5" cols="50">
                     @ViewBag.Result
                 </div>
             </p>
             <p>
                 <input type="submit" id="btnSubmit" name="btnSubmit" value="Recognize" />
-                <input type="reset" id="btnReset" name="btnReset" value="Start Again" />
+                <input type="reset" id="btnReset" name="btnReset" onclick="replaceCurrentPage(/)" value="Start Again" />
             </p>
         </form>
     </p>

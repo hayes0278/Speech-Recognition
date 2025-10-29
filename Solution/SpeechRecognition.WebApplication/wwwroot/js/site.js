@@ -55,4 +55,3 @@ function changeAction(action) {
 }
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
-alert('Test');

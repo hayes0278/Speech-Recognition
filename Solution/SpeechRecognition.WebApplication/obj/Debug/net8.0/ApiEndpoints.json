@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "SpeechRecognition.WebApplication.Controllers.SpeechSynthesisController",
+    "ContainingType": "SpeechRecognition.WebApplication.Controllers.CommandController",
     "Method": "GetCommands",
-    "RelativePath": "SpeechSynthesis",
+    "RelativePath": "Command",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -21,16 +21,22 @@
     "EndpointName": "GetCommands"
   },
   {
-    "ContainingType": "SpeechRecognition.WebApplication.Controllers.SpeechSynthesisController",
-    "Method": "GetActions",
-    "RelativePath": "SpeechSynthesis",
-    "HttpMethod": "GET",
+    "ContainingType": "SpeechRecognition.WebApplication.Controllers.SpeechRecognitionController",
+    "Method": "PostSpeechRecognition",
+    "RelativePath": "SpeechRecognition",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[SpeechRecognition.ClassLibrary.Speech, SpeechRecognition.ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.String",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -39,6 +45,6 @@
         "StatusCode": 200
       }
     ],
-    "EndpointName": "GetActions"
+    "EndpointName": "PostSpeechRecognition"
   }
 ]

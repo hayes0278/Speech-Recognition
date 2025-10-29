@@ -5,38 +5,21 @@ namespace SpeechRecognition.WebApplication.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class SpeechSynthesisController : ControllerBase
+    public class SpeechRecognitionController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+        private readonly ILogger<SpeechRecognitionController> _logger;
 
-        private readonly ILogger<SpeechSynthesisController> _logger;
-
-        public SpeechSynthesisController(ILogger<SpeechSynthesisController> logger)
+        public SpeechRecognitionController(ILogger<SpeechRecognitionController> logger)
         {
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetCommands")]
-        public IEnumerable<Speech> GetCommands()
+        [HttpPost(Name = "PostSpeechRecognition")]
+        public string PostSpeechRecognition(string command)
         {
-            return Enumerable.Range(1, Summaries.Length).Select(index => new Speech
-            {
-                Name = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
-        }
-
-        [HttpGet(Name = "GetActions")]
-        public IEnumerable<Speech> GetActions()
-        {
-            return Enumerable.Range(1, Summaries.Length).Select(index => new Speech
-            {
-                Name = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            SpeechRecognitionApp recogniser = new SpeechRecognitionApp();
+            string result = recogniser.RecogniseInputCommand(command);
+            return result;
         }
     }
 }

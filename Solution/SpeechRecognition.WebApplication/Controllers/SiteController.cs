@@ -26,9 +26,8 @@ namespace SpeechRecognition.WebApplication.Controllers
             if (formProcessed != null && formProcessed.ToLower() == "recognize")
             {
                 string selectCommand = Request.Query["selCommand"];
-                string selectAction = Request.Query["selAction"];
 
-                if (string.IsNullOrEmpty(selectCommand) || string.IsNullOrEmpty(selectAction))
+                if (string.IsNullOrEmpty(selectCommand))
                 {
                     ViewBag.Message = _localizer["Please enter a command and action to simulate the recognition."];
                 }
@@ -37,10 +36,10 @@ namespace SpeechRecognition.WebApplication.Controllers
                 string myResult = recogniser.RecogniseInputCommand(selectCommand);
 
                 ViewBag.Command = selectCommand;
-                ViewBag.Action = selectAction;
                 ViewBag.Result = myResult;
             }
 
+            ViewBag.AppName = _localizer["Speech Recognition."];
             ViewBag.AppTagLine = _localizer["A lightweight speech recognition web tool."];
 
             return View();

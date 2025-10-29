@@ -5,12 +5,12 @@
     "version": "1.0"
   },
   "paths": {
-    "/SpeechSynthesis": {
+    "/Command": {
       "get": {
         "tags": [
-          "SpeechSynthesis"
+          "Command"
         ],
-        "operationId": "GetSpeechSynthesis",
+        "operationId": "GetCommands",
         "responses": {
           "200": {
             "description": "OK",
@@ -37,6 +37,45 @@
                   "items": {
                     "$ref": "#/components/schemas/Speech"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SpeechRecognition": {
+      "post": {
+        "tags": [
+          "SpeechRecognition"
+        ],
+        "operationId": "PostSpeechRecognition",
+        "parameters": [
+          {
+            "name": "command",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
                 }
               }
             }

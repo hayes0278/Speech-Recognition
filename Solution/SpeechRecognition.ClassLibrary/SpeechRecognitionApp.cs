@@ -56,19 +56,19 @@ namespace SpeechRecognition.ClassLibrary
 
             if (_result == null)
             {
-                Console.WriteLine("Speech recogniser offline.");
-                result = "The speech recogniser is offline.";
+                result = $"I could not find that command \"{inputCommand}\".";
+                Console.WriteLine(result);
                 return result;
             }
 
             if (_result.Text == inputCommand)
             {
-                Console.WriteLine($"Recognised \"{inputCommand}\".");
-                result = $"Recognised \"{inputCommand}\" with a confidense of {_result.Confidence * 100.00} .";
+                result = $"I recognised \"{inputCommand}\" with a confidense of {_result.Confidence * 100.00}%.";
+                Console.WriteLine(result);
             } else
             {
-                Console.WriteLine($"I dont understand the command: \"{inputCommand}\".");
                 result = $"I dont understand the command: \"{inputCommand}\".";
+                Console.WriteLine(result);
             }
 
             return result;
@@ -94,6 +94,12 @@ namespace SpeechRecognition.ClassLibrary
         {
             get { return _result; }
             set { _result = value; }
+        }
+
+        public string[] CommandChoices
+        {
+            get { return _commandChoices; }
+            set { _commandChoices = value; }
         }
 
         #endregion

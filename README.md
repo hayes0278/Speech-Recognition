@@ -4,11 +4,13 @@ A lightweight speech recognition web tool written in C#.
 ## Features
 - Select input commands to test recognition.
 - Includes a REST API for external queries.
-- Assign actions for your input commands.
-- Test your creation in real time online.
+- Includes bad commands to demonstrate functionality.
+- 
 
 ## Screenshots 
-![Home Page Screenshot](Media/Screenshots/HomePage.png)
+![Home Page Screenshot](Media/Screenshots/HomePage.PNG)
+
+![Bad Command Screenshot](Media/Screenshots/BadCommand.png)
 
 ![Swagger Screenshot](Media/Screenshots/SwaggerPage.png)
 

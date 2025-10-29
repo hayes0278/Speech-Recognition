@@ -1,3 +1,5 @@
+using SpeechRecognition.ClassLibrary;
+
 namespace SpeechRecognition.NunitTests
 {
     public class Tests
@@ -8,9 +10,12 @@ namespace SpeechRecognition.NunitTests
         }
 
         [Test]
-        public void Test1()
+        public void RecogniseInputCommand_Test()
         {
-            Assert.Pass();
+            string command = "hello";
+            SpeechRecognitionApp recogniser = new SpeechRecognitionApp();
+            string actualResult = recogniser.RecogniseInputCommand(command);
+            if (!string.IsNullOrEmpty(actualResult)) { Assert.Pass(); } else { Assert.Fail(); } ;
         }
 
         [Test]
