@@ -33,25 +33,7 @@ function replaceCurrentPage(newUrl) {
 
 function changeLanguage(newLanguage) {
     setCookie("culture", newLanguage, 5);
-    document.getElementById('testArea').Value = $"Your new language: {newLanguage}";
-}
-
-function displayMessage(message) {
-    document.getElementById('testArea').Value = message;
-}
-
-function displayAlert(message) {
-    alert(message);
-}
-
-function changeCommand(command) {
-    document.getElementById('testArea').innerHTML = command;
-    alert(command);
-}
-
-function changeAction(action) {
-    document.getElementById('testArea').innerHTML = action;
-    alert(action);
+    replaceCurrentPage('/')
 }
 
 document.getElementById("year").innerHTML = new Date().getFullYear();

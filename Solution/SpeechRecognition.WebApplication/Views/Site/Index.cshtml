@@ -6,7 +6,7 @@
     <h1 class="display-4">@ViewBag.AppName</h1>
     <p>@ViewBag.AppTagLine</p>
 </div>
-
+<div id="mobileShim" name="mobileShim"></div>
 <div class="text-left">
     <p>@ViewBag.Message</p>
     <p>Valid Commands: "hello", "red", "green", "blue", "exit"</p>
@@ -31,7 +31,7 @@
             </p>
             <p>
                 <input type="submit" id="btnSubmit" name="btnSubmit" value="Recognize" />
-                <input type="reset" id="btnReset" name="btnReset" onclick="replaceCurrentPage(/)" value="Start Again" />
+                <input type="reset" id="btnReset" name="btnReset" onclick="replaceCurrentPage('/');" value="Start Again" />
             </p>
         </form>
     </p>
