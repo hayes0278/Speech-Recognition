@@ -1,5 +1,4 @@
 ﻿using System.Speech.Recognition;
-using System.Speech.Synthesis;
 
 namespace SpeechRecognition.ClassLibrary
 {
@@ -8,7 +7,7 @@ namespace SpeechRecognition.ClassLibrary
         #region fields
         private string _command;
         private string _action;
-        private string[] _commandChoices = { "hello", "red", "green", "blue", "exit" };
+        private string[] _commandChoices = { "Hello", "Red", "Green", "Blue", "Purple", "Alert", "Message", "White", "Black", "Exit" };
         private string _result;
         #endregion
 
@@ -34,7 +33,7 @@ namespace SpeechRecognition.ClassLibrary
 
             if (_result == null)
             {
-                result = $"I could not find that command \"{inputCommand}\".";
+                result = $"I did not recognise that command \"{inputCommand}\".";
                 return result;
             }
 
@@ -44,7 +43,7 @@ namespace SpeechRecognition.ClassLibrary
             }
             else
             {
-                result = $"I dont understand the command: \"{inputCommand}\".";
+                result = $"I dont understand that command: \"{inputCommand}\".";
             }
 
             return result;

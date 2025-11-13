@@ -5,7 +5,7 @@ A lightweight speech recognition web tool written in C#.
 - Select input commands to test recognition.
 - Includes a REST API for external queries.
 - Includes bad commands to demonstrate functionality.
-- Train the system with recognised commands.
+- Trains the system with recognised commands.
 
 ## Screenshots 
 ![Home Page Screenshot](Media/Screenshots/HomePage.png)
@@ -30,4 +30,4 @@ View the project [Source Code](https://github.com/hayes0278/Speech-Recognition).
 
 ## Limitations
 - Does not contain required security code for a production deployment.
-- Should be able to accept voice input from the users micophone.
+- Should be able to accept voice input stream from the users' micophone.

@@ -9,22 +9,22 @@
 <div id="mobileShim" name="mobileShim"></div>
 <div class="text-left">
     <p>@ViewBag.Message</p>
-    <p>Valid Commands: "hello", "red", "green", "blue", "exit"</p>
+    
     <p>
         <form id="frmSpeechRecognition" name="frmSpeechRecognition" action="" method="Get">
             <p>
                 <label for="selCommand">Command:</label>
                 <select id="selCommand" name="selCommand" onchange="changeCommand(this.value);" value="@ViewBag.Command">
-                    <option value="hello">Hello</option>
-                    <option value="red">Red</option>
                     <option value="notreal">Not Real A</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
+                    @foreach (var cmd in ViewBag.CommandChoices)
+                    {
+                        <option value="@cmd.ToString()">@cmd</option>
+                    }
                     <option value="notreal">Not Real B</option>
-                    <option value="exit">Exit</option>
                 </select>
             </p>
             <p>
+                <label for="testArea">Message:</label>
                 <div id="testArea" name="testArea" rows="5" cols="50">
                     @ViewBag.Result
                 </div>
@@ -34,5 +34,14 @@
                 <input type="reset" id="btnReset" name="btnReset" onclick="replaceCurrentPage('/');" value="Start Again" />
             </p>
         </form>
+    </p>
+    <p>
+        <label>Valid Commands:</label>
+        <ul>
+            @foreach (var cmd in ViewBag.CommandChoices)
+            {
+                <li>@cmd</li>
+            }
+        </ul>
     </p>
 </div>

@@ -1,10 +1,8 @@
-using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using SpeechRecognition.ClassLibrary;
 using SpeechRecognition.WebApplication.Models;
 using System.Diagnostics;
-using System.Speech.Recognition;
 
 namespace SpeechRecognition.WebApplication.Controllers
 {
@@ -12,6 +10,7 @@ namespace SpeechRecognition.WebApplication.Controllers
     {
         private readonly ILogger<SiteController> _logger;
         private readonly IStringLocalizer<SiteController> _localizer;
+        SpeechRecognitionApp _recogniser = new SpeechRecognitionApp();
 
         public SiteController(ILogger<SiteController> logger, IStringLocalizer<SiteController> localizer)
         {
@@ -31,16 +30,16 @@ namespace SpeechRecognition.WebApplication.Controllers
                 {
                     ViewBag.Message = _localizer["Please enter a command and action to simulate the recognition."];
                 }
-
-                SpeechRecognitionApp recogniser = new SpeechRecognitionApp();
-                string myResult = recogniser.RecogniseInputCommand(selectCommand);
+                
+                string myResult = _recogniser.RecogniseInputCommand(selectCommand);
 
                 ViewBag.Command = selectCommand;
                 ViewBag.Result = myResult;
             }
 
-            ViewBag.AppName = _localizer["Speech Recognition."];
+            ViewBag.AppName = _localizer["Speech Recognition"];
             ViewBag.AppTagLine = _localizer["A lightweight speech recognition web tool."];
+            ViewBag.CommandChoices = _recogniser.CommandChoices;
 
             return View();
         }

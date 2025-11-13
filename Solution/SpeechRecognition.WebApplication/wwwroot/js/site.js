@@ -20,7 +20,7 @@ function getCookie(name) {
             return cookie.substring(cookieName.length, cookie.length);
         }
     }
-    return null; // Return null if the cookie is not found
+    return null; // Returns null if the cookie is not found
 }
 
 function redirectToNewPage(newUrl) {
