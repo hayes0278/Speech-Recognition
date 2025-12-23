@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using SpeechRecognition.ClassLibrary;
 
 namespace SpeechRecognition.WebApplication.Controllers
@@ -8,10 +9,12 @@ namespace SpeechRecognition.WebApplication.Controllers
     public class SpeechRecognitionController : ControllerBase
     {
         private readonly ILogger<SpeechRecognitionController> _logger;
+        private readonly IStringLocalizer<SpeechRecognitionController> _localizer;
 
-        public SpeechRecognitionController(ILogger<SpeechRecognitionController> logger)
+        public SpeechRecognitionController(ILogger<SpeechRecognitionController> logger, IStringLocalizer<SpeechRecognitionController> localizer)
         {
             _logger = logger;
+            _localizer = localizer;
         }
 
         [HttpPost(Name = "PostSpeechRecognition")]

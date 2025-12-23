@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeechRecognition.WebApplic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeechRecognition.ClassLibrary", "SpeechRecognition.ClassLibrary\SpeechRecognition.ClassLibrary.csproj", "{0223E9FB-02E6-4296-B12C-9FEC9D30F787}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeechRecognition.ConsoleApp", "SpeechRecognition.ConsoleApp\SpeechRecognition.ConsoleApp.csproj", "{A74D0C3C-57DB-4D28-9636-0FB15486F10E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0223E9FB-02E6-4296-B12C-9FEC9D30F787}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0223E9FB-02E6-4296-B12C-9FEC9D30F787}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0223E9FB-02E6-4296-B12C-9FEC9D30F787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A74D0C3C-57DB-4D28-9636-0FB15486F10E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74D0C3C-57DB-4D28-9636-0FB15486F10E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74D0C3C-57DB-4D28-9636-0FB15486F10E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74D0C3C-57DB-4D28-9636-0FB15486F10E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
