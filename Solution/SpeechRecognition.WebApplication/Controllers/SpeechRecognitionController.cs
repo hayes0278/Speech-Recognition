@@ -21,7 +21,7 @@ namespace SpeechRecognition.WebApplication.Controllers
         public string PostSpeechRecognition(string command)
         {
             SpeechRecognitionApp recogniser = new SpeechRecognitionApp();
-            string result = recogniser.RecogniseInputCommand(command);
+            string result = recogniser.RecogniseInputCommand(command.ToLower().Trim());
             return result;
         }
     }

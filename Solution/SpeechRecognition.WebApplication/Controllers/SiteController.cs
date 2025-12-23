@@ -31,7 +31,7 @@ namespace SpeechRecognition.WebApplication.Controllers
                     ViewBag.Message = _localizer["Please enter a command and action to simulate the recognition."];
                 }
                 
-                string myResult = _recogniser.RecogniseInputCommand(selectCommand);
+                string myResult = _recogniser.RecogniseInputCommand(selectCommand.ToLower().Trim());
 
                 ViewBag.Command = selectCommand;
                 ViewBag.Result = myResult;

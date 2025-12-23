@@ -8,7 +8,7 @@ bool isRunning = true;
 while (isRunning)
 {
     string? command = Console.ReadLine();
-    if (command.ToLower() == "exit")
+    if (command.ToLower().Trim() == "exit")
     {
         isRunning = false;
     }
