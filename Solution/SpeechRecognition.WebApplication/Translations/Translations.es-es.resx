@@ -118,6 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="welcome_to" xml:space="preserve">
-    <value />
+    <value>Bienvenido a</value>
+  </data>
+  <data name="action" xml:space="preserve">
+    <value>Acción</value>
+  </data>
+  <data name="command" xml:space="preserve">
+    <value>Dominio</value>
+  </data>
+  <data name="help" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Hogar</value>
+  </data>
+  <data name="speech_recognition" xml:space="preserve">
+    <value>Reconocimiento de voz</value>
+  </data>
+  <data name="custom_command" xml:space="preserve">
+    <value>Comando personalizado</value>
+  </data>
+  <data name="custom_action" xml:space="preserve">
+    <value>Acción personalizada</value>
   </data>
 </root>
